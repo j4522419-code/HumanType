@@ -1,0 +1,2 @@
+# Runtime uses only Python's standard library. This is needed only to rebuild the EXE.
+pyinstaller==6.22.2
