@@ -17,6 +17,7 @@ with ZipFile(root / "HumanTypePython-Windows.zip", "w", ZIP_DEFLATED) as package
 files = [*root.glob("*.py"), *root.glob("*.pyw"), *root.glob("*.ps1"), root / "README.md", root / "requirements-build.txt", root / ".gitignore"]
 files += list((root / "tests").glob("*.py"))
 files += list((root / "assets").glob("*.ico"))
+files += list((root / "assets").glob("*.md"))
 with ZipFile(root / "HumanTypePython-Source.zip", "w", ZIP_DEFLATED) as package:
     for path in sorted(files):
         package.write(path, str(Path("HumanTypePython") / path.relative_to(root)))
